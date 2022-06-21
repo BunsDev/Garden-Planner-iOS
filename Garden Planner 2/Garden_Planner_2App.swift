@@ -12,6 +12,7 @@ struct Garden_Planner_2App: App {
     var body: some Scene {
         WindowGroup {
             ViewController()
+                .environmentObject(Global())
         }
     }
 }

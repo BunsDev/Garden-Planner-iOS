@@ -1,11 +1,12 @@
 //
-//  Models.swift
+//  Folders.swift
 //  Garden Planner 2
 //
 //  Created by Sophia Fortier on 6/20/22.
 //
 
 import Foundation
+import SwiftUI
 
 class userFolders: ObservableObject {
     var favorites = folder(name: "Favorites", contents: [])

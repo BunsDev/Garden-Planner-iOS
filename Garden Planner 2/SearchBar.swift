@@ -9,27 +9,16 @@ import SwiftUI
 
 struct SearchBar_Preview: PreviewProvider {
     static var previews: some View {
-        SearchBarWB()
+        SearchBar()
             .environmentObject(Global())
-    }
-}
-
-struct SearchBarWB: View {
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(Color(UIColor.systemTeal))
-                .ignoresSafeArea()
-            SearchBar()
-        }
     }
 }
 
 struct SearchBar: View {
     
     @StateObject var api = Api()
-    @ObservedObject var vm = SearchBarVM()
     @EnvironmentObject var gl: Global
+    @ObservedObject var vm = SearchBarVM()
     
     var body: some View {
         VStack {
@@ -46,7 +35,7 @@ struct SearchBar: View {
                         TextField("Search for plants...", text: $vm.searchStr)
                             .onSubmit {
                                 vm.showList = true
-                                api.getCrops(searchString: vm.searchStr)
+                                api.getCrops(searchTerm: vm.searchStr)
                             }
                             .font(.system(size: 17))
                             .foregroundColor(.black)
@@ -67,6 +56,7 @@ struct SearchBar: View {
                                         .foregroundColor(.white)
                                         .frame(height: 40)
                                     Button(action: {
+                                        gl.passCrop = crop
                                         gl.view = "CropDetailView"
                                     }) {
                                         HStack {
@@ -92,4 +82,6 @@ extension SearchBar {
         @Published var showList = false
     }
 }
+
+
 

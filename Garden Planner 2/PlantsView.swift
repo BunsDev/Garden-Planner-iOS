@@ -49,11 +49,3 @@ struct PlantsView: View {
     }
 }
 
-struct CreateFormView: View {
-    @State var name = ""
-    var body: some View {
-        Form {
-            TextField("Name", text: $name)
-        }
-    }
-}
