@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */; };
-		E4A9301928612E5700A17920 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301828612E5700A17920 /* ContentView.swift */; };
+		E4A9301928612E5700A17920 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301828612E5700A17920 /* PlantsView.swift */; };
 		E4A9301B28612E5900A17920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A9301A28612E5900A17920 /* Assets.xcassets */; };
 		E4A9301E28612E5900A17920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A9301D28612E5900A17920 /* Preview Assets.xcassets */; };
+		E4A9302728612F6000A17920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302628612F6000A17920 /* ViewController.swift */; };
+		E4A93029286135E800A17920 /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A93028286135E800A17920 /* Crop.swift */; };
+		E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302A28614F5B00A17920 /* SearchBar.swift */; };
+		E4A9302F28614F9F00A17920 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302E28614F9F00A17920 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4A9301328612E5700A17920 /* Garden Planner 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garden Planner 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_Planner_2App.swift; sourceTree = "<group>"; };
-		E4A9301828612E5700A17920 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E4A9301828612E5700A17920 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 		E4A9301A28612E5900A17920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4A9301D28612E5900A17920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4A9302628612F6000A17920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4A93028286135E800A17920 /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		E4A9302A28614F5B00A17920 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		E4A9302E28614F9F00A17920 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */,
-				E4A9301828612E5700A17920 /* ContentView.swift */,
+				E4A9302628612F6000A17920 /* ViewController.swift */,
+				E4A9301828612E5700A17920 /* PlantsView.swift */,
+				E4A9302A28614F5B00A17920 /* SearchBar.swift */,
+				E4A9302E28614F9F00A17920 /* Models.swift */,
+				E4A93028286135E800A17920 /* Crop.swift */,
 				E4A9301A28612E5900A17920 /* Assets.xcassets */,
 				E4A9301C28612E5900A17920 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4A9301928612E5700A17920 /* ContentView.swift in Sources */,
+				E4A9302728612F6000A17920 /* ViewController.swift in Sources */,
+				E4A93029286135E800A17920 /* Crop.swift in Sources */,
+				E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */,
+				E4A9301928612E5700A17920 /* PlantsView.swift in Sources */,
 				E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */,
+				E4A9302F28614F9F00A17920 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
