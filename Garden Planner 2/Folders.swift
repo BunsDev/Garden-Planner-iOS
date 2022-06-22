@@ -8,17 +8,7 @@
 import Foundation
 import SwiftUI
 
-class userFolders: ObservableObject {
-    var favorites = folder(name: "Favorites", contents: [])
-}
-extension userFolders {
-    public static func ==(lhs: userFolders, rhs: userFolders) -> Bool {
-        return lhs.favorites == rhs.favorites
-    }
-}
-
-struct folder: Identifiable, Hashable {
-    let id = UUID()
+struct folder: Hashable {
     var name: String
     var contents: [crop]
 }

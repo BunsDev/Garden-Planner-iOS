@@ -17,17 +17,16 @@ struct CropDetailView_Preview: PreviewProvider {
 struct CropDetailView: View {
     
     @EnvironmentObject var gl: Global
-    @StateObject var vm = CropDetailVM()
+    @ObservedObject var vm = CropDetailVM()
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Button(action: {
-                    if inFavs() && !vm.hearted {
-                        userFolders().favorites.contents.removeAll(where: {$0 == gl.passCrop})
-                    }
-                    if !inFavs() && vm.hearted {
-                        userFolders().favorites.contents.append(gl.passCrop)
+                    if vm.hearted && !inFavs() {
+                        gl.folders[0].contents.append(gl.passCrop)
+                    } else if !vm.hearted && inFavs() {
+                        gl.folders[0].contents.removeAll(where: {$0 == gl.passCrop})
                     }
                     gl.view = "PlantsView"
                 }) {
@@ -47,20 +46,9 @@ struct CropDetailView: View {
                         .foregroundColor(.pink)
                         .padding(.trailing, 10)
                 }
-            }
-            
-            VStack(alignment: .leading) {
-                if gl.passCrop.attributes.main_image_path.prefix(4) != "http" {
-                    AsyncImage(url: URL(string: getReplacementImage()), content: { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: 210)
-                            .frame(maxWidth: .infinity)
-                            .cornerRadius(5)
-                    }, placeholder: {
-                        Placeholder()
-                    })
-                } else {
+            }.padding([.leading, .trailing], 15)
+            ScrollView {
+                VStack(alignment: .leading) {
                     AsyncImage(url: URL(string: gl.passCrop.attributes.main_image_path), content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fill)
@@ -70,29 +58,22 @@ struct CropDetailView: View {
                     }, placeholder: {
                         Placeholder()
                     })
-                }
-                Text(gl.passCrop.attributes.name.capitalized)
-                    .font(.system(size: 30, weight: .bold))
-                
-                if gl.passCrop.attributes.description != nil {
-                    Text("Description")
-                        .font(.system(size: 20, weight: .semibold))
-                        .padding([.top, .bottom], 1)
-                    Text(gl.passCrop.attributes.description!)
-                }
-                
-            }.padding(.top, 20)
-            
+                    Text(gl.passCrop.attributes.name.capitalized)
+                        .font(.system(size: 30, weight: .bold))
+                    
+                    if gl.passCrop.attributes.description != nil {
+                        Text("Description")
+                            .font(.system(size: 20, weight: .semibold))
+                            .padding([.top, .bottom], 1)
+                        Text(gl.passCrop.attributes.description!)
+                    }
+                    
+                }.padding(.top, 20)
+                    .padding([.leading, .trailing], 15)
+            }
             Spacer()
             
-        }.padding([.leading, .trailing], 15)
-            .onAppear {
-                if inFavs() {
-                    vm.hearted = true
-                } else {
-                    vm.hearted = false
-                }
-            }
+        }
     }
 }
 
@@ -101,18 +82,11 @@ extension CropDetailView {
         @Published var hearted = false
     }
     func inFavs() -> Bool {
-        for crop in userFolders().favorites.contents {
-            if crop == Global().passCrop {
-                return true
-            }
+        if Global().folders[0].contents.contains(gl.passCrop) {
+            return true
+        } else {
+            return false
         }
-        return false
-    }
-    
-    func getReplacementImage() -> String {
-//        Api().getImages(searchTerm: gl.passCrop.attributes.name)
-//        return Api().imagesResponse!.images_results[0].thumbnail
-        return ""
     }
 }
 

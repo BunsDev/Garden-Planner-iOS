@@ -22,7 +22,15 @@ struct PlantsView: View {
         NavigationView {
             VStack {
                 SearchBar()
-                Spacer()
+                ForEach(gl.folders[0].contents, id: \.self) { crop in
+                    Text(crop.attributes.name)
+                }
+                if gl.folders[0].contents.contains(gl.passCrop) {
+                    Text("True")
+                } else {
+                    Text("False")
+                }
+            Spacer()
             }
             .navigationTitle("Plants")
             .toolbar {
@@ -46,6 +54,7 @@ struct PlantsView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -83,5 +83,33 @@ extension SearchBar {
     }
 }
 
+//MARK: - API
+public class Api: ObservableObject {
+    
+    @Published var response: myData? = nil
+    
+    //MARK: - getCrops
+    func getCrops(searchTerm: String) {
+        let urlString = "https://openfarm.cc/api/v1/crops/?filter=\(searchTerm.replacingOccurrences(of: " ", with: "_"))"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL...")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let data = data {
+                    do {
+                        let results = try JSONDecoder().decode(myData.self, from: data)
+                        self.response = results
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
+        }
+        .resume()
+    }
+}
 
 
