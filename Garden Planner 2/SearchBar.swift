@@ -9,8 +9,18 @@ import SwiftUI
 
 struct SearchBar_Preview: PreviewProvider {
     static var previews: some View {
-        SearchBar()
+        withBackGround()
             .environmentObject(Global())
+    }
+}
+
+struct withBackGround: View {
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(Color.green2).ignoresSafeArea()
+            SearchBar()
+        }
     }
 }
 
@@ -23,9 +33,9 @@ struct SearchBar: View {
     var body: some View {
         VStack {
             //MARK: - Search Bar
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color("gray1"))
-                .frame(height: 38)
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(.white)
+                .frame(height: 45)
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -36,24 +46,33 @@ struct SearchBar: View {
                             .onSubmit {
                                 vm.showList = true
                                 api.getCrops(searchTerm: vm.searchStr)
+                            }.font(.custom("Inter-Medium", size: 16))
+                        if vm.showList {
+                            Button(action: {
+                                vm.showList = false
+                                vm.searchStr = ""
+                            }) {
+                                Image(systemName: "x.circle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 20)
                             }
-                            .font(.system(size: 17))
-                            .foregroundColor(.black)
-                    }.padding(.leading, 10)
-                        .foregroundColor(Color("gray2"))
+                        }
+                    }.padding([.leading, .trailing], 15)
+                        .foregroundColor(.accentColor)
                 )
             
             //MARK: - List
             if vm.showList {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color("gray1"))
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(.white)
                     ScrollView(showsIndicators: false) {
                         VStack {
                             ForEach(api.response?.data ?? [], id: \.self) { crop in
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 7)
-                                        .foregroundColor(.white)
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .foregroundColor(Color("gray1"))
                                         .frame(height: 40)
                                     Button(action: {
                                         gl.passCrop = crop
@@ -61,6 +80,7 @@ struct SearchBar: View {
                                     }) {
                                         HStack {
                                             Text(crop.attributes.name.capitalized)
+                                                .font(.custom("Inter-Medium", size: 16))
                                             Spacer()
                                             Image(systemName: "chevron.right")
                                         }
@@ -68,11 +88,11 @@ struct SearchBar: View {
                                 }.padding([.top, .bottom], -2)
                             }
                         }
-                    }.padding(.all, 5)
+                    }.padding(.all, 7)
                 }.frame(height: 400)
                 
             }
-        }.padding([.leading, .trailing], 15)
+        }.padding([.leading, .trailing], 25)
     }
 }
 

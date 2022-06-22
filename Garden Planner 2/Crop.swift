@@ -41,7 +41,7 @@ struct atts: Codable, Hashable {
 }
 extension atts: Equatable {
     public static func ==(lhs: atts, rhs: atts) -> Bool {
-        return lhs.name == rhs.name && lhs.main_image_path == rhs.main_image_path
+        return lhs.name == rhs.name && lhs.main_image_path == rhs.main_image_path && lhs.description == rhs.description
     }
 }
 

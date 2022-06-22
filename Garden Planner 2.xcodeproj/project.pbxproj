@@ -16,6 +16,11 @@
 		E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302A28614F5B00A17920 /* SearchBar.swift */; };
 		E4A9302F28614F9F00A17920 /* Folders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302E28614F9F00A17920 /* Folders.swift */; };
 		E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9303028615EE700A17920 /* CropDetailView.swift */; };
+		E4CF91032863B94D00362C58 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF90FF2863B94D00362C58 /* Inter-Regular.ttf */; };
+		E4CF91042863B94D00362C58 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */; };
+		E4CF91052863B94D00362C58 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91012863B94D00362C58 /* Inter-Medium.ttf */; };
+		E4CF91062863B94D00362C58 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91022863B94D00362C58 /* Inter-Bold.ttf */; };
+		E4CF91092863C16700362C58 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF91082863C16700362C58 /* NavBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,12 @@
 		E4A9302A28614F5B00A17920 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E4A9302E28614F9F00A17920 /* Folders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folders.swift; sourceTree = "<group>"; };
 		E4A9303028615EE700A17920 /* CropDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDetailView.swift; sourceTree = "<group>"; };
+		E4CF90FE2863B90900362C58 /* Garden-Planner-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Garden-Planner-2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E4CF90FF2863B94D00362C58 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		E4CF91012863B94D00362C58 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		E4CF91022863B94D00362C58 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		E4CF91082863C16700362C58 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +72,16 @@
 		E4A9301528612E5700A17920 /* Garden Planner 2 */ = {
 			isa = PBXGroup;
 			children = (
+				E4CF90FE2863B90900362C58 /* Garden-Planner-2-Info.plist */,
 				E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */,
 				E4A9302628612F6000A17920 /* ViewController.swift */,
 				E4A9301828612E5700A17920 /* PlantsView.swift */,
 				E4A9302A28614F5B00A17920 /* SearchBar.swift */,
+				E4CF91082863C16700362C58 /* NavBar.swift */,
 				E4A9303028615EE700A17920 /* CropDetailView.swift */,
 				E4A93028286135E800A17920 /* Crop.swift */,
 				E4A9302E28614F9F00A17920 /* Folders.swift */,
+				E4CF91072863B95300362C58 /* Fonts */,
 				E4A9301A28612E5900A17920 /* Assets.xcassets */,
 				E4A9301C28612E5900A17920 /* Preview Content */,
 			);
@@ -80,6 +94,17 @@
 				E4A9301D28612E5900A17920 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4CF91072863B95300362C58 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E4CF91022863B94D00362C58 /* Inter-Bold.ttf */,
+				E4CF91012863B94D00362C58 /* Inter-Medium.ttf */,
+				E4CF90FF2863B94D00362C58 /* Inter-Regular.ttf */,
+				E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CF91062863B94D00362C58 /* Inter-Bold.ttf in Resources */,
+				E4CF91042863B94D00362C58 /* Inter-SemiBold.ttf in Resources */,
 				E4A9301E28612E5900A17920 /* Preview Assets.xcassets in Resources */,
+				E4CF91032863B94D00362C58 /* Inter-Regular.ttf in Resources */,
+				E4CF91052863B94D00362C58 /* Inter-Medium.ttf in Resources */,
 				E4A9301B28612E5900A17920 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A9302728612F6000A17920 /* ViewController.swift in Sources */,
+				E4CF91092863C16700362C58 /* NavBar.swift in Sources */,
 				E4A93029286135E800A17920 /* Crop.swift in Sources */,
 				E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */,
 				E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */,
@@ -290,6 +320,7 @@
 				DEVELOPMENT_TEAM = VB88JGJJJG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Garden-Planner-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +350,7 @@
 				DEVELOPMENT_TEAM = VB88JGJJJG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Garden-Planner-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
