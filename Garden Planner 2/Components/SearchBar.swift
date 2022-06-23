@@ -34,7 +34,7 @@ struct SearchBar: View {
         VStack {
             //MARK: - Search Bar
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(.white)
+                .foregroundColor(.gray1)
                 .frame(height: 45)
                 .overlay(
                     HStack {
@@ -42,11 +42,13 @@ struct SearchBar: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 17)
+                            .foregroundColor(.accentColor)
                         TextField("Search for plants...", text: $vm.searchStr)
                             .onSubmit {
                                 vm.showList = true
                                 api.getCrops(searchTerm: vm.searchStr)
                             }.font(.custom("Inter-Medium", size: 16))
+                            .foregroundColor(.accentColor)
                         if vm.showList {
                             Button(action: {
                                 vm.showList = false
@@ -56,23 +58,23 @@ struct SearchBar: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: 20)
+                                    .foregroundColor(.accentColor)
                             }
                         }
                     }.padding([.leading, .trailing], 15)
-                        .foregroundColor(.accentColor)
                 )
             
             //MARK: - List
             if vm.showList {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(.white)
+                        .foregroundColor(.gray1)
                     ScrollView(showsIndicators: false) {
                         VStack {
                             ForEach(api.response?.data ?? [], id: \.self) { crop in
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 5)
-                                        .foregroundColor(Color("gray1"))
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(.white)
                                         .frame(height: 40)
                                     Button(action: {
                                         gl.passCrop = crop
@@ -92,7 +94,7 @@ struct SearchBar: View {
                 }.frame(height: 400)
                 
             }
-        }.padding([.leading, .trailing], 25)
+        }.padding([.leading, .trailing], 28)
     }
 }
 

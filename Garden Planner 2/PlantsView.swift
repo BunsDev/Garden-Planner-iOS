@@ -21,8 +21,18 @@ struct PlantsView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(LinearGradient(colors: [.green1, .green2], startPoint: .top, endPoint: .bottom)).ignoresSafeArea()
+                .fill(Color.white)
+            
             VStack {
+                RoundedRectangle(cornerRadius: 35)
+                    .fill(Color.green1)
+                    .ignoresSafeArea()
+                    .frame(height: 180)
+                Spacer()
+            }
+            
+            VStack {
+                
                 //MARK: - Button
                 HStack {
                     Spacer()
@@ -31,7 +41,7 @@ struct PlantsView: View {
                             gl.view = "CreateFolderView"
                         }) {
                             Text("Create new folder")
-                            Image(systemName: "folder.badge.plus")
+                            Image(systemName: "plus")
                         }
                         Button(action: {
                             gl.view = "DeleteFolderView"
@@ -40,13 +50,14 @@ struct PlantsView: View {
                             Image(systemName: "trash")
                         }
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "folder")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 23)
-                    }.foregroundColor(.greenTitle)
+                            .frame(height: 22)
+                    }.foregroundColor(.darkGreen)
                         .padding(.top, 20)
-                }
+                }.padding([.leading, .trailing], 25)
+                
                 
                 //MARK: - Header
                 HStack {
@@ -56,18 +67,18 @@ struct PlantsView: View {
                             .padding(.bottom, -1)
                         Text("Search the OpenFarm API for garden plants!")
                             .font(.custom("Inter-SemiBold", size: 21))
-                    }.foregroundColor(.greenTitle)
+                    }.foregroundColor(.darkGreen)
                         .padding(.top, -5)
                     Spacer()
-                }
+                }.padding([.leading, .trailing], 25)
                 
                 //MARK: - Folders
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     ForEach(gl.folders, id: \.self) { folder in
                         ZStack {
                         RoundedRectangle(cornerRadius: 20)
                             .frame(height: 170)
-                            .foregroundColor(.white)
+                            .foregroundColor(.gray1)
                             .overlay(
                                 VStack {
                                     HStack {
@@ -99,28 +110,78 @@ struct PlantsView: View {
                                         }, placeholder: {
                                                 RoundedRectangle(cornerRadius: 15)
                                                     .frame(width: 125, height: 100)
-                                                    .foregroundColor(Color("gray1"))
+                                                    .foregroundColor(Color.gray2)
                                         })
                                     }
-                                }.padding(.leading, 15)
-                            }.padding(.top, 29)
-                        }.padding(.bottom, 7)
-                    }.padding(.top, 50)
-                }.padding(.top, 10)
+                                }.padding(.leading, 15) //end hstack
+                            }.padding(.top, 29) //end horizontal scrollview
+                        }.padding(.bottom, 7) //end zstack
+                    }.padding(.top, 50) //end foreach
+                        .padding([.leading, .trailing], 28)
+                        .padding(.bottom, 60)
+                }.padding(.top, 36) //end scrollview
                 Spacer()
-            }.padding([.leading, .trailing], 25)
-                //end vstack
+            } //end vstack
         
+            
             //MARK: - Search Bar
-             
             VStack {
                 SearchBar()
                 Spacer()
-            }.padding(.top, 168)
+            }.padding(.top, 195)
             
+            
+            //MARK: - NavBar
             VStack {
                 Spacer()
-                NavBar()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(height: 60)
+                        .foregroundColor(.darkGreen)
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "leaf")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white)
+                                .frame(height: 25)
+                        }
+                        Spacer()
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "house")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.green2)
+                                .frame(height: 26)
+                        }
+                        Spacer()
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "calendar")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.green2)
+                                .frame(height: 26)
+                        }
+                        Spacer()
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "checkmark.circle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.green2)
+                                .frame(height: 27)
+                        }
+                        Spacer()
+                    }
+                }
             }.padding([.leading, .trailing], 25)
             
         } //end zstack

@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 class FolderTags: ObservableObject {
-    var location = ["Outdoors", "Living Room"]
-    var light = ["Dark", "Low Light", "Partial Sun", "Sunny"]
+    var tags = ["Outdoors", "Living Room", "Bedroom", "Dark", "Low Light", "Partial Sun", "Sunny"]
 }
 
 
@@ -19,10 +18,11 @@ struct folder: Hashable {
     var name: String
     var contents: [crop]
     var selected: Bool
+    var tags: [String]
 }
 extension folder {
     public static func ==(lhs: folder, rhs: folder) -> Bool {
-        return lhs.name == rhs.name && lhs.contents == rhs.contents && lhs.selected == rhs.selected
+        return lhs.name == rhs.name && lhs.contents == rhs.contents && lhs.selected == rhs.selected && lhs.tags == rhs.tags
     }
 }
 
