@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeleteFolderView_Preview: PreviewProvider {
+struct DeleteFolder_Preview: PreviewProvider {
     static var previews: some View {
         DeleteFolderView()
             .environmentObject(Global())
@@ -26,7 +26,7 @@ struct DeleteFolderView: View {
                 Text("Delete a Folder")
                     .font(.custom("Inter-Bold", size: 40))
                     .padding(.bottom, -1)
-                Text("Select one of your folders from the list below.")
+                Text("Select one of the folders from\nthe list below.")
                     .font(.custom("Inter-SemiBold", size: 21))
             } .padding(.top, -5)
             

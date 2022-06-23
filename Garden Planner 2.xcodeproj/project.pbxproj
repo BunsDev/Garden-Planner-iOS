@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E439DE892864F02500684550 /* TasksAndNotifsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439DE882864F02500684550 /* TasksAndNotifsView.swift */; };
 		E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */; };
 		E4A9301928612E5700A17920 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301828612E5700A17920 /* PlantsView.swift */; };
 		E4A9301B28612E5900A17920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A9301A28612E5900A17920 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E439DE882864F02500684550 /* TasksAndNotifsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksAndNotifsView.swift; sourceTree = "<group>"; };
 		E4A9301328612E5700A17920 /* Garden Planner 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garden Planner 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_Planner_2App.swift; sourceTree = "<group>"; };
 		E4A9301828612E5700A17920 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
@@ -83,8 +85,8 @@
 				E4CF90FE2863B90900362C58 /* Garden-Planner-2-Info.plist */,
 				E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */,
 				E4A9302628612F6000A17920 /* ViewController.swift */,
-				E4CF91112863F80300362C58 /* Global.swift */,
 				E4A9301828612E5700A17920 /* PlantsView.swift */,
+				E439DE882864F02500684550 /* TasksAndNotifsView.swift */,
 				E4CF911728640B5700362C58 /* Folders */,
 				E4CF911628640B4700362C58 /* Components */,
 				E4CF911528640B3200362C58 /* Crops */,
@@ -126,6 +128,7 @@
 		E4CF911628640B4700362C58 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E4CF91112863F80300362C58 /* Global.swift */,
 				E4A9302A28614F5B00A17920 /* SearchBar.swift */,
 			);
 			path = Components;
@@ -232,6 +235,7 @@
 				E4CF91102863F35500362C58 /* FolderDetailView.swift in Sources */,
 				E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */,
 				E4A9302F28614F9F00A17920 /* Folders.swift in Sources */,
+				E439DE892864F02500684550 /* TasksAndNotifsView.swift in Sources */,
 				E4CF911428640A5E00362C58 /* DeleteFolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CropDetailView_Preview: PreviewProvider {
+struct CropDetail_Preview: PreviewProvider {
     static var previews: some View {
         CropDetailView()
             .environmentObject(Global())
