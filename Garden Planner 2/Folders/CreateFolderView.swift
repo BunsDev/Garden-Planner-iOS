@@ -8,7 +8,7 @@
 import SwiftUI
 import WrappingHStack
 
-struct CreateFolderView_Preview: PreviewProvider {
+struct CreateFolder_Preview: PreviewProvider {
     static var previews: some View {
         CreateFolderView()
             .environmentObject(Global())

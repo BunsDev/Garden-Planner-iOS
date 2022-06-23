@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FolderDetailView_Preview: PreviewProvider {
+struct FolderDetail_Preview: PreviewProvider {
     static var previews: some View {
         FolderDetailView()
             .environmentObject(Global())

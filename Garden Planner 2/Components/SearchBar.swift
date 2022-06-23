@@ -34,7 +34,7 @@ struct SearchBar: View {
         VStack {
             //MARK: - Search Bar
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(.gray1)
+                .foregroundColor(.white)
                 .frame(height: 45)
                 .overlay(
                     HStack {
@@ -68,13 +68,15 @@ struct SearchBar: View {
             if vm.showList {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(.gray1)
+                        .stroke(Color.gray2, lineWidth: 4)
+                        .background(.white)
+                        .cornerRadius(15)
                     ScrollView(showsIndicators: false) {
                         VStack {
                             ForEach(api.response?.data ?? [], id: \.self) { crop in
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.gray1)
                                         .frame(height: 40)
                                     Button(action: {
                                         gl.passCrop = crop

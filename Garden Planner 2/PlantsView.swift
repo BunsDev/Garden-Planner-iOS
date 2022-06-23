@@ -27,7 +27,7 @@ struct PlantsView: View {
                 RoundedRectangle(cornerRadius: 35)
                     .fill(Color.green1)
                     .ignoresSafeArea()
-                    .frame(height: 180)
+                    .frame(height: 240)
                 Spacer()
             }
             
@@ -116,10 +116,10 @@ struct PlantsView: View {
                                 }.padding(.leading, 15) //end hstack
                             }.padding(.top, 29) //end horizontal scrollview
                         }.padding(.bottom, 7) //end zstack
-                    }.padding(.top, 50) //end foreach
+                    }.padding(.top, 15)
                         .padding([.leading, .trailing], 28)
                         .padding(.bottom, 60)
-                }.padding(.top, 36) //end scrollview
+                }.padding(.top, 73) //end scrollview
                 Spacer()
             } //end vstack
         
@@ -128,62 +128,68 @@ struct PlantsView: View {
             VStack {
                 SearchBar()
                 Spacer()
-            }.padding(.top, 195)
+            }.padding(.top, 175)
             
-            
-            //MARK: - NavBar
-            VStack {
-                Spacer()
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(height: 60)
-                        .foregroundColor(.darkGreen)
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            
-                        }) {
-                            Image(systemName: "leaf")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.white)
-                                .frame(height: 25)
-                        }
-                        Spacer()
-                        Button(action: {
-                            
-                        }) {
-                            Image(systemName: "house")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.green2)
-                                .frame(height: 26)
-                        }
-                        Spacer()
-                        Button(action: {
-                            
-                        }) {
-                            Image(systemName: "calendar")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.green2)
-                                .frame(height: 26)
-                        }
-                        Spacer()
-                        Button(action: {
-                            
-                        }) {
-                            Image(systemName: "checkmark.circle")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.green2)
-                                .frame(height: 27)
-                        }
-                        Spacer()
-                    }
-                }
-            }.padding([.leading, .trailing], 25)
+            NavBarPV()
             
         } //end zstack
+    }
+}
+
+struct NavBarPV: View {
+    @EnvironmentObject var gl: Global
+    var body: some View {
+        //MARK: - NavBar
+        VStack {
+            Spacer()
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(height: 60)
+                    .foregroundColor(.darkGreen)
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "leaf")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.white)
+                            .frame(height: 25)
+                    }
+                    Spacer()
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "grid")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.green2)
+                            .frame(height: 26)
+                    }
+                    Spacer()
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "calendar")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.green2)
+                            .frame(height: 26)
+                    }
+                    Spacer()
+                    Button(action: {
+                        gl.view = "TasksAndNotifsView"
+                    }) {
+                        Image(systemName: "checkmark.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.green2)
+                            .frame(height: 27)
+                    }
+                    Spacer()
+                }
+            }
+        }.padding([.leading, .trailing], 25)
     }
 }

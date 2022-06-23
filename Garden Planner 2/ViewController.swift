@@ -27,6 +27,8 @@ struct ViewController: View {
             CreateFolderView()
         case "DeleteFolderView":
             DeleteFolderView()
+        case "TasksAndNotifsView":
+            TasksAndNotifsView()
         default:
             Text("ERROR: Default")
         }
