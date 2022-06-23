@@ -66,24 +66,29 @@ struct DeleteFolderView: View {
             //MARK: - Folders
             VStack(alignment: .leading) {
                 ForEach(gl.folders, id: \.self) { folder in
-                    HStack {
-                        Button(action: {
-                            let i = gl.folders.firstIndex(where: {$0.name == folder.name})
-                            if !gl.folders[i!].selected {
-                                gl.folders[i!].selected = true
-                            } else {
-                                gl.folders[i!].selected = false
-                            }
-                        }) {
-                            Image(systemName: folder.selected ? "checkmark.circle.fill" : "circle")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: 25)
-                                .foregroundColor(.greenTitle)
-                                .padding(.trailing, 8)
+                    Button(action: {
+                        let i = gl.folders.firstIndex(where: {$0.name == folder.name})
+                        if !gl.folders[i!].selected {
+                            gl.folders[i!].selected = true
+                        } else {
+                            gl.folders[i!].selected = false
                         }
-                        Text(folder.name)
-                            .font(.custom("Inter-Medium", size: 25))
+                    }) {
+                        HStack {
+                            ZStack {
+                                Image(systemName: folder.selected ? "circle.fill" : "circle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(.green1)
+                                Image(systemName: folder.selected ? "checkmark.circle" : "circle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(.darkGreen)
+                            }.frame(height: 25)
+                                .padding(.trailing, 8)
+                            Text(folder.name)
+                                .font(.custom("Inter-Medium", size: 25))
+                        }
                     }
                 }
             }.padding(.top, 10)
