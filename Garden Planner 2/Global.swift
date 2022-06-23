@@ -21,6 +21,8 @@ class Global: ObservableObject {
 extension Color {
     static let green1 = Color("green1")
     static let green2 = Color("green2")
-    static let greenTitle = Color("greenTitle")
     static let darkGreen = Color("darkGreen")
+    static let gray1 = Color("gray1")
+    static let gray2 = Color("gray2")
+    static let redish = Color("redish")
 }

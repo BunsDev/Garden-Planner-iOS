@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class FolderTags: ObservableObject {
-    var tags = ["Outdoors", "Living Room", "Dark", "Low Light", "Partial Sun", "Sunny"]
+    var tags = ["Outdoors", "Living Room", "Bedroom", "Dark", "Low Light", "Partial Sun", "Sunny"]
 }
 
 

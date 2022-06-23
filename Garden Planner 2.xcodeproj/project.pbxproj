@@ -20,7 +20,6 @@
 		E4CF91042863B94D00362C58 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */; };
 		E4CF91052863B94D00362C58 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91012863B94D00362C58 /* Inter-Medium.ttf */; };
 		E4CF91062863B94D00362C58 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91022863B94D00362C58 /* Inter-Bold.ttf */; };
-		E4CF91092863C16700362C58 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF91082863C16700362C58 /* NavBar.swift */; };
 		E4CF910B2863E6A400362C58 /* CreateFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910A2863E6A400362C58 /* CreateFolderView.swift */; };
 		E4CF910E2863F14B00362C58 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = E4CF910D2863F14B00362C58 /* WrappingHStack */; };
 		E4CF91102863F35500362C58 /* FolderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910F2863F35500362C58 /* FolderDetailView.swift */; };
@@ -44,7 +43,6 @@
 		E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4CF91012863B94D00362C58 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		E4CF91022863B94D00362C58 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
-		E4CF91082863C16700362C58 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		E4CF910A2863E6A400362C58 /* CreateFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderView.swift; sourceTree = "<group>"; };
 		E4CF910F2863F35500362C58 /* FolderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailView.swift; sourceTree = "<group>"; };
 		E4CF91112863F80300362C58 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				E4A9302A28614F5B00A17920 /* SearchBar.swift */,
-				E4CF91082863C16700362C58 /* NavBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A9302728612F6000A17920 /* ViewController.swift in Sources */,
-				E4CF91092863C16700362C58 /* NavBar.swift in Sources */,
 				E4A93029286135E800A17920 /* Crop.swift in Sources */,
 				E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */,
 				E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */,
