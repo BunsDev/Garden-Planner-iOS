@@ -32,6 +32,10 @@ extension crop: Equatable {
         hasher.combine(attributes)
     }
 }
+func getTestCrop() -> crop {
+    return crop(attributes: atts(name: "Cherry Tomato Husky Red", main_image_path: "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5e65715f23ddeb0004c9ddb8.jpg?1583706462", description: "Indeterminate,  compact"))
+}
+
 
 //MARK: - Atts
 struct atts: Codable, Hashable {

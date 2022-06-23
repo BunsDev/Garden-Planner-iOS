@@ -10,7 +10,7 @@ import SwiftUI
 struct NavBar: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 15)
+            RoundedRectangle(cornerRadius: 20)
                 .frame(height: 60)
                 .foregroundColor(.white)
             HStack {
