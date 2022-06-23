@@ -65,29 +65,38 @@ struct CreateFolderView: View {
                 .foregroundColor(.accentColor)
                 .padding(.top, 20)
             
-                WrappingHStack(FolderTags().location, id: \.self) { place in
-                    Group{
-                        Text(place)
-                            .font(.custom("Inter-Medium", size: 16))
-                            .padding([.leading, .trailing], 15)
-                            .padding([.top, .bottom], 7)
-                            .background(Color.green1)
-                            .foregroundColor(.darkGreen)
-                            .cornerRadius(20)
-                    }.padding([.top, .bottom], 4)
-                }.padding(.bottom, -4)
-                
-                WrappingHStack(FolderTags().light, id: \.self) { light in
-                    Group{
-                        Text(light)
-                            .font(.custom("Inter-Medium", size: 16))
-                            .padding([.leading, .trailing], 15)
-                            .padding([.top, .bottom], 7)
-                            .background(Color.green1)
-                            .foregroundColor(.darkGreen)
-                            .cornerRadius(20)
-                    }.padding([.top, .bottom], 6)
+                WrappingHStack(FolderTags().tags, id: \.self) { tag in
+                    if notInTags(item: tag) {
+                        Button(action: {
+                            vm.selectedTags.append(tag)
+                        }) {
+                            Group {
+                                Text(tag)
+                                    .font(.custom("Inter-Medium", size: 16))
+                                    .padding([.leading, .trailing], 15)
+                                    .padding([.top, .bottom], 7)
+                                    .background(Color.green1)
+                                    .foregroundColor(.darkGreen)
+                                    .cornerRadius(20)
+                            }.padding(.bottom, 12)
+                        }
+                    } else {
+                        Button(action: {
+                            vm.selectedTags.removeAll(where: {$0 == tag})
+                        }) {
+                            Group {
+                                Text(tag)
+                                    .font(.custom("Inter-Medium", size: 16))
+                                    .padding([.leading, .trailing], 15)
+                                    .padding([.top, .bottom], 7)
+                                    .background(Color.darkGreen)
+                                    .foregroundColor(.green1)
+                                    .cornerRadius(20)
+                            }.padding(.bottom, 12)
+                        }
+                    }
                 }
+                    .frame(width: 300)
             }
             Spacer()
             
@@ -100,7 +109,7 @@ struct CreateFolderView: View {
                         if vm.name.isEmpty {
                             vm.noNameError = true
                         } else {
-                            gl.folders.append(folder(name: vm.name, contents: [], selected: false))
+                            gl.folders.append(folder(name: vm.name, contents: [], selected: false, tags: vm.selectedTags))
                             gl.view = "PlantsView"
                         }
                     }) {
@@ -134,6 +143,13 @@ extension CreateFolderView {
     @MainActor class CreateFolderVM: ObservableObject {
         @Published var name = ""
         @Published var noNameError = false
+        @Published var selectedTags = [String]()
+    }
+    func notInTags(item: String) -> Bool {
+        if vm.selectedTags.contains(where: {$0 == item}) {
+            return false
+        }
+        return true
     }
 }
 
