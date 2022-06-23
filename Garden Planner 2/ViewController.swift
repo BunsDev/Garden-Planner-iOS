@@ -25,6 +25,8 @@ struct ViewController: View {
             CropDetailView()
         case "CreateFolderView":
             CreateFolderView()
+        case "DeleteFolderView":
+            DeleteFolderView()
         default:
             Text("ERROR: Default")
         }
