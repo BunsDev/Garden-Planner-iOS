@@ -109,10 +109,10 @@ struct TasksAndNotifsView: View {
                                     .font(.custom("Inter-Medium", size: 18))
                                 Spacer()
                                 Button(action: {
-                                    let i = m.tasks.firstindex(where: {$0 == task})
-                                    m.tasks[i].selected.toggle()
+                                    let i = m.tasks.firstIndex(where: {$0 == task})
+                                    m.tasks[i!].selected.toggle()
                                 }) {
-                                    Image(systemName: task.selected ? "circle" : "checkmark.circle")
+                                    Image(systemName: task.selected ? "checkmark.circle" : "circle")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: 20)

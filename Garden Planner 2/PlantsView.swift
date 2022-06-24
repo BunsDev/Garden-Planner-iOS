@@ -130,7 +130,9 @@ struct PlantsView: View {
                 Spacer()
             }.padding(.top, 175)
             
-            NavBarPV()
+            ZStack {
+                NavBarPV()
+            }
             
         } //end zstack
     }

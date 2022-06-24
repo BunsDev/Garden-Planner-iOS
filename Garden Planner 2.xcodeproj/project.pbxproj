@@ -17,12 +17,12 @@
 		E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302A28614F5B00A17920 /* SearchBar.swift */; };
 		E4A9302F28614F9F00A17920 /* Folders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302E28614F9F00A17920 /* Folders.swift */; };
 		E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9303028615EE700A17920 /* CropDetailView.swift */; };
+		E4C312D92866237100C0C80D /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = E4C312D82866237100C0C80D /* WrappingHStack */; };
 		E4CF91032863B94D00362C58 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF90FF2863B94D00362C58 /* Inter-Regular.ttf */; };
 		E4CF91042863B94D00362C58 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */; };
 		E4CF91052863B94D00362C58 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91012863B94D00362C58 /* Inter-Medium.ttf */; };
 		E4CF91062863B94D00362C58 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91022863B94D00362C58 /* Inter-Bold.ttf */; };
 		E4CF910B2863E6A400362C58 /* CreateFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910A2863E6A400362C58 /* CreateFolderView.swift */; };
-		E4CF910E2863F14B00362C58 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = E4CF910D2863F14B00362C58 /* WrappingHStack */; };
 		E4CF91102863F35500362C58 /* FolderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910F2863F35500362C58 /* FolderDetailView.swift */; };
 		E4CF91122863F80300362C58 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF91112863F80300362C58 /* Global.swift */; };
 		E4CF911428640A5E00362C58 /* DeleteFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF911328640A5E00362C58 /* DeleteFolderView.swift */; };
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CF910E2863F14B00362C58 /* WrappingHStack in Frameworks */,
+				E4C312D92866237100C0C80D /* WrappingHStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 			);
 			name = "Garden Planner 2";
 			packageProductDependencies = (
-				E4CF910D2863F14B00362C58 /* WrappingHStack */,
+				E4C312D82866237100C0C80D /* WrappingHStack */,
 			);
 			productName = "Garden Planner 2";
 			productReference = E4A9301328612E5700A17920 /* Garden Planner 2.app */;
@@ -193,7 +193,7 @@
 			);
 			mainGroup = E4A9300A28612E5700A17920;
 			packageReferences = (
-				E4CF910C2863F14B00362C58 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+				E4C312D72866237100C0C80D /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 			);
 			productRefGroup = E4A9301428612E5700A17920 /* Products */;
 			projectDirPath = "";
@@ -441,20 +441,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E4CF910C2863F14B00362C58 /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+		E4C312D72866237100C0C80D /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dkk/WrappingHStack";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E4CF910D2863F14B00362C58 /* WrappingHStack */ = {
+		E4C312D82866237100C0C80D /* WrappingHStack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E4CF910C2863F14B00362C58 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			package = E4C312D72866237100C0C80D /* XCRemoteSwiftPackageReference "WrappingHStack" */;
 			productName = WrappingHStack;
 		};
 /* End XCSwiftPackageProductDependency section */
