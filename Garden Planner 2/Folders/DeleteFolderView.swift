@@ -42,7 +42,7 @@ struct DeleteFolderView: View {
                             .font(.custom("Inter-Medium", size: 17))
                             .padding([.leading, .trailing], 15)
                             .padding([.top, .bottom], 7)
-                            .background(Color.green1)
+                            .background(Color.lightGreen)
                             .foregroundColor(.darkGreen)
                             .cornerRadius(20)
                     }
@@ -54,7 +54,7 @@ struct DeleteFolderView: View {
                             .font(.custom("Inter-Medium", size: 17))
                             .padding([.leading, .trailing], 15)
                             .padding([.top, .bottom], 7)
-                            .background(Color.green1)
+                            .background(Color.lightGreen)
                             .foregroundColor(.darkGreen)
                             .cornerRadius(20)
                     }
@@ -79,7 +79,7 @@ struct DeleteFolderView: View {
                                 Image(systemName: folder.selected ? "circle.fill" : "circle")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(.green1)
+                                    .foregroundColor(.lightGreen)
                                 Image(systemName: folder.selected ? "checkmark.circle" : "circle")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)

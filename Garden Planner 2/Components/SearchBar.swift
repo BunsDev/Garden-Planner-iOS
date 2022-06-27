@@ -18,7 +18,7 @@ struct withBackGround: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(Color.green2).ignoresSafeArea()
+                .fill(Color.lightGreen).ignoresSafeArea()
             SearchBar()
         }
     }

@@ -109,10 +109,10 @@ struct TasksAndNotifsView: View {
                                     .font(.custom("Inter-Medium", size: 18))
                                 Spacer()
                                 Button(action: {
-                                    let i = m.tasks.firstindex(where: {$0 == task})
-                                    m.tasks[i].selected.toggle()
+                                    let i = m.tasks.firstIndex(where: {$0 == task})
+                                    m.tasks[i!].selected.toggle()
                                 }) {
-                                    Image(systemName: task.selected ? "circle" : "checkmark.circle")
+                                    Image(systemName: task.selected ? "checkmark.circle" : "circle")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(height: 20)
@@ -150,62 +150,3 @@ class Messages: ObservableObject {
     @Published var tasks = [notif(memo: "Water Garden Bed 1", priority: 0, selected: false)]
 }
 
-
-struct NavBarTN: View {
-    
-    @EnvironmentObject var gl: Global
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(height: 60)
-                    .foregroundColor(.green2)
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        gl.view = "PlantsView"
-                    }) {
-                        Image(systemName: "leaf")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.darkGreen)
-                            .frame(height: 25)
-                    }
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "grid")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.darkGreen)
-                            .frame(height: 26)
-                    }
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "calendar")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.darkGreen)
-                            .frame(height: 26)
-                    }
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "checkmark.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                            .frame(height: 27)
-                    }
-                    Spacer()
-                }
-            }
-        }.padding([.leading, .trailing], 25)
-    }
-}

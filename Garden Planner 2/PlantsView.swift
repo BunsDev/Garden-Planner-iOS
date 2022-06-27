@@ -25,7 +25,7 @@ struct PlantsView: View {
             
             VStack {
                 RoundedRectangle(cornerRadius: 35)
-                    .fill(Color.green1)
+                    .fill(Color.darkGreen)
                     .ignoresSafeArea()
                     .frame(height: 240)
                 Spacer()
@@ -54,7 +54,7 @@ struct PlantsView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 22)
-                    }.foregroundColor(.darkGreen)
+                    }.foregroundColor(.lightGreenHeader)
                         .padding(.top, 20)
                 }.padding([.leading, .trailing], 25)
                 
@@ -67,7 +67,7 @@ struct PlantsView: View {
                             .padding(.bottom, -1)
                         Text("Search the OpenFarm API for garden plants!")
                             .font(.custom("Inter-SemiBold", size: 21))
-                    }.foregroundColor(.darkGreen)
+                    }.foregroundColor(.lightGreenHeader)
                         .padding(.top, -5)
                     Spacer()
                 }.padding([.leading, .trailing], 25)
@@ -130,66 +130,10 @@ struct PlantsView: View {
                 Spacer()
             }.padding(.top, 175)
             
-            NavBarPV()
+            ZStack {
+                NavBarPV()
+            }
             
         } //end zstack
-    }
-}
-
-struct NavBarPV: View {
-    @EnvironmentObject var gl: Global
-    var body: some View {
-        //MARK: - NavBar
-        VStack {
-            Spacer()
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(height: 60)
-                    .foregroundColor(.darkGreen)
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "leaf")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                            .frame(height: 25)
-                    }
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "grid")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.green2)
-                            .frame(height: 26)
-                    }
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "calendar")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.green2)
-                            .frame(height: 26)
-                    }
-                    Spacer()
-                    Button(action: {
-                        gl.view = "TasksAndNotifsView"
-                    }) {
-                        Image(systemName: "checkmark.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.green2)
-                            .frame(height: 27)
-                    }
-                    Spacer()
-                }
-            }
-        }.padding([.leading, .trailing], 25)
     }
 }
