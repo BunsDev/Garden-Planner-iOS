@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40B8EC7286A0A89006A9796 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B8EC6286A0A89006A9796 /* PlannerView.swift */; };
+		E40B8EC9286A0FE6006A9796 /* NavBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B8EC8286A0FE6006A9796 /* NavBars.swift */; };
 		E439DE892864F02500684550 /* TasksAndNotifsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439DE882864F02500684550 /* TasksAndNotifsView.swift */; };
 		E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */; };
 		E4A9301928612E5700A17920 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301828612E5700A17920 /* PlantsView.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E40B8EC6286A0A89006A9796 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
+		E40B8EC8286A0FE6006A9796 /* NavBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBars.swift; sourceTree = "<group>"; };
 		E439DE882864F02500684550 /* TasksAndNotifsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksAndNotifsView.swift; sourceTree = "<group>"; };
 		E4A9301328612E5700A17920 /* Garden Planner 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garden Planner 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_Planner_2App.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				E4CF90FE2863B90900362C58 /* Garden-Planner-2-Info.plist */,
 				E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */,
 				E4A9302628612F6000A17920 /* ViewController.swift */,
+				E40B8EC6286A0A89006A9796 /* PlannerView.swift */,
 				E4A9301828612E5700A17920 /* PlantsView.swift */,
 				E439DE882864F02500684550 /* TasksAndNotifsView.swift */,
 				E4CF911728640B5700362C58 /* Folders */,
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CF91112863F80300362C58 /* Global.swift */,
+				E40B8EC8286A0FE6006A9796 /* NavBars.swift */,
 				E4A9302A28614F5B00A17920 /* SearchBar.swift */,
 			);
 			path = Components;
@@ -226,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A9302728612F6000A17920 /* ViewController.swift in Sources */,
+				E40B8EC9286A0FE6006A9796 /* NavBars.swift in Sources */,
 				E4A93029286135E800A17920 /* Crop.swift in Sources */,
+				E40B8EC7286A0A89006A9796 /* PlannerView.swift in Sources */,
 				E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */,
 				E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */,
 				E4CF910B2863E6A400362C58 /* CreateFolderView.swift in Sources */,

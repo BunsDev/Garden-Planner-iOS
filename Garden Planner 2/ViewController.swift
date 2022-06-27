@@ -21,6 +21,8 @@ struct ViewController: View {
         switch gl.view {
         case "PlantsView":
             PlantsView()
+        case "PlannerView":
+            PlannerView()
         case "CropDetailView":
             CropDetailView()
         case "CreateFolderView":

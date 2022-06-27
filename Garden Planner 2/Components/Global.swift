@@ -19,8 +19,10 @@ class Global: ObservableObject {
 
 //MARK: - Colors
 extension Color {
-    static let green1 = Color("green1")
-    static let green2 = Color("green2")
+    static let lightestGreen = Color("lightestGreen")
+    static let lightGreen = Color("lightGreen")
+    static let lightGreenHeader = Color("lightGreenHeader")
+    static let navGreen = Color("navGreen")
     static let darkGreen = Color("darkGreen")
     static let gray1 = Color("gray1")
     static let gray2 = Color("gray2")

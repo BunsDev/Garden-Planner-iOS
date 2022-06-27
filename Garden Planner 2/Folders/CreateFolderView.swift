@@ -75,7 +75,7 @@ struct CreateFolderView: View {
                                     .font(.custom("Inter-Medium", size: 16))
                                     .padding([.leading, .trailing], 15)
                                     .padding([.top, .bottom], 7)
-                                    .background(Color.green1)
+                                    .background(Color.lightestGreen)
                                     .foregroundColor(.darkGreen)
                                     .cornerRadius(20)
                             }.padding(.bottom, 12)
@@ -90,7 +90,7 @@ struct CreateFolderView: View {
                                     .padding([.leading, .trailing], 15)
                                     .padding([.top, .bottom], 7)
                                     .background(Color.darkGreen)
-                                    .foregroundColor(.green1)
+                                    .foregroundColor(.lightestGreen)
                                     .cornerRadius(20)
                             }.padding(.bottom, 12)
                         }
