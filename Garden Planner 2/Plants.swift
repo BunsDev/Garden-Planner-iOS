@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct PlantsView_Preview: PreviewProvider {
+struct Plants_Preview: PreviewProvider {
     static var previews: some View {
-        PlantsView()
+        Plants()
             .environmentObject(Global())
     }
 }
 
-struct PlantsView: View {
+struct Plants: View {
     
     @EnvironmentObject var gl: Global
     
@@ -25,7 +25,7 @@ struct PlantsView: View {
             
             VStack {
                 RoundedRectangle(cornerRadius: 35)
-                    .fill(Color.darkGreen)
+                    .fill(Color.lightGreen)
                     .ignoresSafeArea()
                     .frame(height: 240)
                 Spacer()
@@ -38,13 +38,13 @@ struct PlantsView: View {
                     Spacer()
                     Menu {
                         Button(action: {
-                            gl.view = "CreateFolderView"
+                            gl.view = "CreateFolder"
                         }) {
                             Text("Create new folder")
                             Image(systemName: "plus")
                         }
                         Button(action: {
-                            gl.view = "DeleteFolderView"
+                            gl.view = "DeleteFolder"
                         }) {
                             Text("Delete a folder")
                             Image(systemName: "trash")
@@ -54,7 +54,7 @@ struct PlantsView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 22)
-                    }.foregroundColor(.lightGreenHeader)
+                    }.foregroundColor(.darkGreen)
                         .padding(.top, 20)
                 }.padding([.leading, .trailing], 25)
                 
@@ -67,7 +67,7 @@ struct PlantsView: View {
                             .padding(.bottom, -1)
                         Text("Search the OpenFarm API for garden plants!")
                             .font(.custom("Inter-SemiBold", size: 21))
-                    }.foregroundColor(.lightGreenHeader)
+                    }.foregroundColor(.darkGreen)
                         .padding(.top, -5)
                     Spacer()
                 }.padding([.leading, .trailing], 25)
@@ -85,7 +85,7 @@ struct PlantsView: View {
                                         Text(folder.name)
                                         Spacer()
                                         Button(action: {
-                                            gl.view = "FolderDetailView"
+                                            gl.view = "FolderDetail"
                                         }) {
                                             Image(systemName: "chevron.right")
                                                 .resizable()

@@ -7,52 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E40B8EC7286A0A89006A9796 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B8EC6286A0A89006A9796 /* PlannerView.swift */; };
+		E40B8EC7286A0A89006A9796 /* Planner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B8EC6286A0A89006A9796 /* Planner.swift */; };
 		E40B8EC9286A0FE6006A9796 /* NavBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B8EC8286A0FE6006A9796 /* NavBars.swift */; };
-		E439DE892864F02500684550 /* TasksAndNotifsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439DE882864F02500684550 /* TasksAndNotifsView.swift */; };
+		E439DE892864F02500684550 /* TasksAndNotifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439DE882864F02500684550 /* TasksAndNotifs.swift */; };
+		E486BDA1286A831B00977CE7 /* CreateGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486BDA0286A831B00977CE7 /* CreateGarden.swift */; };
+		E486BDA5286A960300977CE7 /* DeleteGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486BDA4286A960300977CE7 /* DeleteGarden.swift */; };
+		E486BDA7286A97FF00977CE7 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486BDA6286A97FF00977CE7 /* Garden.swift */; };
+		E486BDA9286A9B3F00977CE7 /* GardenDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486BDA8286A9B3F00977CE7 /* GardenDetail.swift */; };
 		E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */; };
-		E4A9301928612E5700A17920 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301828612E5700A17920 /* PlantsView.swift */; };
+		E4A9301928612E5700A17920 /* Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9301828612E5700A17920 /* Plants.swift */; };
 		E4A9301B28612E5900A17920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A9301A28612E5900A17920 /* Assets.xcassets */; };
 		E4A9301E28612E5900A17920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A9301D28612E5900A17920 /* Preview Assets.xcassets */; };
 		E4A9302728612F6000A17920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302628612F6000A17920 /* ViewController.swift */; };
 		E4A93029286135E800A17920 /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A93028286135E800A17920 /* Crop.swift */; };
 		E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302A28614F5B00A17920 /* SearchBar.swift */; };
 		E4A9302F28614F9F00A17920 /* Folders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9302E28614F9F00A17920 /* Folders.swift */; };
-		E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9303028615EE700A17920 /* CropDetailView.swift */; };
+		E4A9303128615EE700A17920 /* CropDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9303028615EE700A17920 /* CropDetail.swift */; };
 		E4C312D92866237100C0C80D /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = E4C312D82866237100C0C80D /* WrappingHStack */; };
 		E4CF91032863B94D00362C58 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF90FF2863B94D00362C58 /* Inter-Regular.ttf */; };
 		E4CF91042863B94D00362C58 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */; };
 		E4CF91052863B94D00362C58 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91012863B94D00362C58 /* Inter-Medium.ttf */; };
 		E4CF91062863B94D00362C58 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4CF91022863B94D00362C58 /* Inter-Bold.ttf */; };
-		E4CF910B2863E6A400362C58 /* CreateFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910A2863E6A400362C58 /* CreateFolderView.swift */; };
-		E4CF91102863F35500362C58 /* FolderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910F2863F35500362C58 /* FolderDetailView.swift */; };
+		E4CF910B2863E6A400362C58 /* CreateFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910A2863E6A400362C58 /* CreateFolder.swift */; };
+		E4CF91102863F35500362C58 /* FolderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF910F2863F35500362C58 /* FolderDetail.swift */; };
 		E4CF91122863F80300362C58 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF91112863F80300362C58 /* Global.swift */; };
-		E4CF911428640A5E00362C58 /* DeleteFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF911328640A5E00362C58 /* DeleteFolderView.swift */; };
+		E4CF911428640A5E00362C58 /* DeleteFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF911328640A5E00362C58 /* DeleteFolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E40B8EC6286A0A89006A9796 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
+		E40B8EC6286A0A89006A9796 /* Planner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planner.swift; sourceTree = "<group>"; };
 		E40B8EC8286A0FE6006A9796 /* NavBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBars.swift; sourceTree = "<group>"; };
-		E439DE882864F02500684550 /* TasksAndNotifsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksAndNotifsView.swift; sourceTree = "<group>"; };
+		E439DE882864F02500684550 /* TasksAndNotifs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksAndNotifs.swift; sourceTree = "<group>"; };
+		E486BDA0286A831B00977CE7 /* CreateGarden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGarden.swift; sourceTree = "<group>"; };
+		E486BDA4286A960300977CE7 /* DeleteGarden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGarden.swift; sourceTree = "<group>"; };
+		E486BDA6286A97FF00977CE7 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		E486BDA8286A9B3F00977CE7 /* GardenDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenDetail.swift; sourceTree = "<group>"; };
 		E4A9301328612E5700A17920 /* Garden Planner 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Garden Planner 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden_Planner_2App.swift; sourceTree = "<group>"; };
-		E4A9301828612E5700A17920 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
+		E4A9301828612E5700A17920 /* Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plants.swift; sourceTree = "<group>"; };
 		E4A9301A28612E5900A17920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4A9301D28612E5900A17920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4A9302628612F6000A17920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4A93028286135E800A17920 /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
 		E4A9302A28614F5B00A17920 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E4A9302E28614F9F00A17920 /* Folders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folders.swift; sourceTree = "<group>"; };
-		E4A9303028615EE700A17920 /* CropDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDetailView.swift; sourceTree = "<group>"; };
+		E4A9303028615EE700A17920 /* CropDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropDetail.swift; sourceTree = "<group>"; };
 		E4CF90FE2863B90900362C58 /* Garden-Planner-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Garden-Planner-2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E4CF90FF2863B94D00362C58 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		E4CF91002863B94D00362C58 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4CF91012863B94D00362C58 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		E4CF91022863B94D00362C58 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
-		E4CF910A2863E6A400362C58 /* CreateFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderView.swift; sourceTree = "<group>"; };
-		E4CF910F2863F35500362C58 /* FolderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailView.swift; sourceTree = "<group>"; };
+		E4CF910A2863E6A400362C58 /* CreateFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolder.swift; sourceTree = "<group>"; };
+		E4CF910F2863F35500362C58 /* FolderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetail.swift; sourceTree = "<group>"; };
 		E4CF91112863F80300362C58 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		E4CF911328640A5E00362C58 /* DeleteFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFolderView.swift; sourceTree = "<group>"; };
+		E4CF911328640A5E00362C58 /* DeleteFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E486BDA3286A95E800977CE7 /* Garden Beds */ = {
+			isa = PBXGroup;
+			children = (
+				E486BDA8286A9B3F00977CE7 /* GardenDetail.swift */,
+				E486BDA0286A831B00977CE7 /* CreateGarden.swift */,
+				E486BDA4286A960300977CE7 /* DeleteGarden.swift */,
+				E486BDA6286A97FF00977CE7 /* Garden.swift */,
+			);
+			path = "Garden Beds";
+			sourceTree = "<group>";
+		};
 		E4A9300A28612E5700A17920 = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +108,10 @@
 				E4CF90FE2863B90900362C58 /* Garden-Planner-2-Info.plist */,
 				E4A9301628612E5700A17920 /* Garden_Planner_2App.swift */,
 				E4A9302628612F6000A17920 /* ViewController.swift */,
-				E40B8EC6286A0A89006A9796 /* PlannerView.swift */,
-				E4A9301828612E5700A17920 /* PlantsView.swift */,
-				E439DE882864F02500684550 /* TasksAndNotifsView.swift */,
+				E40B8EC6286A0A89006A9796 /* Planner.swift */,
+				E4A9301828612E5700A17920 /* Plants.swift */,
+				E439DE882864F02500684550 /* TasksAndNotifs.swift */,
+				E486BDA3286A95E800977CE7 /* Garden Beds */,
 				E4CF911728640B5700362C58 /* Folders */,
 				E4CF911628640B4700362C58 /* Components */,
 				E4CF911528640B3200362C58 /* Crops */,
@@ -124,7 +144,7 @@
 		E4CF911528640B3200362C58 /* Crops */ = {
 			isa = PBXGroup;
 			children = (
-				E4A9303028615EE700A17920 /* CropDetailView.swift */,
+				E4A9303028615EE700A17920 /* CropDetail.swift */,
 				E4A93028286135E800A17920 /* Crop.swift */,
 			);
 			path = Crops;
@@ -143,9 +163,9 @@
 		E4CF911728640B5700362C58 /* Folders */ = {
 			isa = PBXGroup;
 			children = (
-				E4CF910F2863F35500362C58 /* FolderDetailView.swift */,
-				E4CF910A2863E6A400362C58 /* CreateFolderView.swift */,
-				E4CF911328640A5E00362C58 /* DeleteFolderView.swift */,
+				E4CF910F2863F35500362C58 /* FolderDetail.swift */,
+				E4CF910A2863E6A400362C58 /* CreateFolder.swift */,
+				E4CF911328640A5E00362C58 /* DeleteFolder.swift */,
 				E4A9302E28614F9F00A17920 /* Folders.swift */,
 			);
 			path = Folders;
@@ -231,20 +251,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E486BDA1286A831B00977CE7 /* CreateGarden.swift in Sources */,
+				E486BDA5286A960300977CE7 /* DeleteGarden.swift in Sources */,
 				E4A9302728612F6000A17920 /* ViewController.swift in Sources */,
+				E486BDA9286A9B3F00977CE7 /* GardenDetail.swift in Sources */,
 				E40B8EC9286A0FE6006A9796 /* NavBars.swift in Sources */,
 				E4A93029286135E800A17920 /* Crop.swift in Sources */,
-				E40B8EC7286A0A89006A9796 /* PlannerView.swift in Sources */,
+				E40B8EC7286A0A89006A9796 /* Planner.swift in Sources */,
 				E4A9302B28614F5B00A17920 /* SearchBar.swift in Sources */,
-				E4A9303128615EE700A17920 /* CropDetailView.swift in Sources */,
-				E4CF910B2863E6A400362C58 /* CreateFolderView.swift in Sources */,
+				E4A9303128615EE700A17920 /* CropDetail.swift in Sources */,
+				E4CF910B2863E6A400362C58 /* CreateFolder.swift in Sources */,
 				E4CF91122863F80300362C58 /* Global.swift in Sources */,
-				E4A9301928612E5700A17920 /* PlantsView.swift in Sources */,
-				E4CF91102863F35500362C58 /* FolderDetailView.swift in Sources */,
+				E4A9301928612E5700A17920 /* Plants.swift in Sources */,
+				E486BDA7286A97FF00977CE7 /* Garden.swift in Sources */,
+				E4CF91102863F35500362C58 /* FolderDetail.swift in Sources */,
 				E4A9301728612E5700A17920 /* Garden_Planner_2App.swift in Sources */,
 				E4A9302F28614F9F00A17920 /* Folders.swift in Sources */,
-				E439DE892864F02500684550 /* TasksAndNotifsView.swift in Sources */,
-				E4CF911428640A5E00362C58 /* DeleteFolderView.swift in Sources */,
+				E439DE892864F02500684550 /* TasksAndNotifs.swift in Sources */,
+				E4CF911428640A5E00362C58 /* DeleteFolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

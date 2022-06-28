@@ -9,12 +9,12 @@ import SwiftUI
 
 struct TasksAndNotifs_Preview: PreviewProvider {
     static var previews: some View {
-        TasksAndNotifsView()
+        TasksAndNotifs()
             .environmentObject(Global())
     }
 }
 
-struct TasksAndNotifsView: View {
+struct TasksAndNotifs: View {
     
     @EnvironmentObject var gl: Global
     @ObservedObject var m = Messages()

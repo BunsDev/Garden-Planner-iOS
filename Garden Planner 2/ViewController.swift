@@ -20,17 +20,23 @@ struct ViewController: View {
     var body: some View {
         switch gl.view {
         case "PlantsView":
-            PlantsView()
-        case "PlannerView":
-            PlannerView()
-        case "CropDetailView":
-            CropDetailView()
-        case "CreateFolderView":
-            CreateFolderView()
-        case "DeleteFolderView":
-            DeleteFolderView()
-        case "TasksAndNotifsView":
-            TasksAndNotifsView()
+            Plants()
+        case "CreateFolder":
+            CreateFolder()
+        case "DeleteFolder":
+            DeleteFolder()
+        case "TasksAndNotifs":
+            TasksAndNotifs()
+        case "Planner":
+            Planner()
+        case "CreateGarden":
+            CreateGarden()
+        case "DeleteGarden":
+            DeleteGarden()
+        case "GardenDetail":
+            GardenDetail()
+        case "CropDetail":
+            CropDetail()
         default:
             Text("ERROR: Default")
         }

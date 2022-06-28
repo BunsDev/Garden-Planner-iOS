@@ -12,8 +12,10 @@ import SwiftUI
 class Global: ObservableObject {
     @Published var view = "PlantsView"
     @Published var passCrop = crop(attributes: atts(name: "test", main_image_path: "", description: ""))
-    @Published var passFolder = folder(name: "Test Folder", contents: [getTestCrop()], selected: false, tags: [])
-    @Published var folders = [folder(name: "Favorites", contents: [], selected: false, tags: []), folder(name: "Garden Bed 2", contents: [], selected: false, tags: [])]
+    @Published var passFolder = folder(name: "Test Folder", contents: [getTestCrop()], selected: false)
+    @Published var folders = [folder(name: "Favorites", contents: [], selected: false), folder(name: "Garden Bed 2", contents: [], selected: false)]
+    @Published var passBed = gardenBed(name: "Garden Bed 1", width: 4, height: 6, contents: [getTestCrop()], selected: false)
+    @Published var beds = [gardenBed(name: "Garden Bed 1", width: 4, height: 6, contents: [], selected: false)]
 }
 
 
