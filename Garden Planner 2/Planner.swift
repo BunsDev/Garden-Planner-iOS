@@ -60,6 +60,8 @@ struct Planner: View {
                     Spacer()
                 }.padding([.leading, .trailing], 25)
                     
+                
+                //MARK: - Beds
                 ScrollView {
                     ForEach(gl.beds, id: \.self) { bed in
                         RoundedRectangle(cornerRadius: 20)
@@ -72,7 +74,8 @@ struct Planner: View {
                                         Text(bed.name)
                                         Spacer()
                                         Button(action: {
-//                                                gl.view = "GardenDetail"
+                                            gl.passBed = bed
+                                            gl.view = "GardenDetail"
                                         }) {
                                             Image(systemName: "chevron.right")
                                                 .resizable()

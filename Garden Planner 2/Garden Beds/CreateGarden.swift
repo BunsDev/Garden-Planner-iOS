@@ -137,7 +137,8 @@ struct CreateGarden: View {
                             vm.noNameError = true
                         } else {
                             gl.beds.append(gardenBed(name: vm.name, width: vm.width, height: vm.height, contents: [], selected: false))
-                            gl.view = "Planner"
+                            gl.passBed = gl.beds[gl.beds.count - 1]
+                            gl.view = "GardenDetail"
                         }
                     }) {
                         RoundedRectangle(cornerRadius: 22)

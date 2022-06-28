@@ -19,7 +19,7 @@ struct ViewController: View {
     @EnvironmentObject var gl: Global
     var body: some View {
         switch gl.view {
-        case "PlantsView":
+        case "Plants":
             Plants()
         case "CreateFolder":
             CreateFolder()

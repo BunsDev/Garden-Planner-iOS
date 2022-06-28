@@ -24,7 +24,7 @@ struct GardenDetail: View {
             VStack {
                 HStack {
                     Button(action: {
-                        
+                        gl.view = "Planner"
                     }) {
                         Group {
                             Image(systemName: "chevron.left")
@@ -35,7 +35,7 @@ struct GardenDetail: View {
                     Spacer()
                     Menu {
                         Button(action: {
-                            
+                            //gl.view = "SearchPlants
                         }) {
                             Text("Add plants")
                             Image(systemName: "plus")
@@ -50,6 +50,7 @@ struct GardenDetail: View {
                     }
                 }.foregroundColor(.darkGreen)
                     .padding(.top, 10)
+                    .padding([.leading, .trailing], 25)
                 
                 //MARK: - Header
                 HStack {
@@ -58,50 +59,27 @@ struct GardenDetail: View {
                             .font(.custom("Inter-Bold", size: 37))
                     }.foregroundColor(.darkGreen)
                     Spacer()
-                }
+                }.padding([.leading, .trailing], 25)
+                
                 
                 //MARK: - Grid
-                
-                GeometryReader { geometry in
-                    
-                    let w = 5
-                    let h = 3
-                    
+                Group {
                     HStack {
-                        Spacer()
-                        ForEach(0..<w, id: \.self) { row in
+                        ForEach(0..<gl.passBed.width, id: \.self) { row in
                             VStack(alignment: .center) {
-                                ForEach(0..<h, id: \.self) { col in
-                                    if w > h {
-                                        Rectangle()
-                                            .frame(width: CGFloat(geometry.size.width / CGFloat(w)), height: CGFloat(geometry.size.width / CGFloat(w)))
-                                            .foregroundColor(.gray2)
-                                            .cornerRadius(3)
-                                            .padding(.all, -2.5)
-                                    } else {
-                                        if h >= (w * 2) {
-                                            Rectangle()
-                                                .frame(width: CGFloat(geometry.size.height / CGFloat(h)), height: CGFloat(geometry.size.height / CGFloat(h)))
-                                                .foregroundColor(.gray2)
-                                                .cornerRadius(3)
-                                                .padding(.all, -2.5)
-                                        } else {
-                                            Rectangle()
-                                                .frame(width: CGFloat(geometry.size.width / CGFloat(w)), height: CGFloat(geometry.size.width / CGFloat(w)))
-                                                .foregroundColor(.gray2)
-                                                .cornerRadius(3)
-                                                .padding(.all, -2.5)
-                                        }
-                                    }
-                                } //end col foreach
-                            } //end vstack
-                        } //end row foreach
-                        Spacer()
-                    } //end hstack
-                }
+                                ForEach(0..<gl.passBed.height, id: \.self) { col in
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .foregroundColor(.gray2)
+                                        .aspectRatio(1.0, contentMode: .fit)
+                                        .padding(-3)
+                                }
+                            }
+                        }
+                    }
+                }.padding([.leading, .trailing], 25) //end hstack
                 
                 Spacer()
-            }.padding([.leading, .trailing], 25)
+            }
         }
     }
 }
@@ -113,35 +91,3 @@ extension GardenDetail {
     }
 }
 
-struct GridView: View {
-
-    let rows: CGFloat
-    let cols: CGFloat
-    let gridColor: Color
-
-    var body: some View {
-    
-        GeometryReader { geometry in
-        
-            let width = geometry.size.width
-            let height = geometry.size.height
-            let xSpacing = width / cols
-            let ySpacing = height / rows
-        
-            Path { path in
-            
-                for index in 0...Int(cols) {
-                    let vOffset: CGFloat = CGFloat(index) * xSpacing
-                    path.move(to: CGPoint(x: vOffset, y: 0))
-                    path.addLine(to: CGPoint(x: vOffset, y: height))
-                }
-                for index in 0...Int(rows) {
-                    let hOffset: CGFloat = CGFloat(index) * ySpacing
-                    path.move(to: CGPoint(x: 0, y: hOffset))
-                    path.addLine(to: CGPoint(x: width, y: hOffset))
-                }
-            }
-            .stroke(gridColor)
-        }
-    }
-}
