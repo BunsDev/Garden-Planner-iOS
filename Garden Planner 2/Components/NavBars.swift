@@ -32,7 +32,7 @@ struct NavBarPV: View {
                     }
                     Spacer()
                     Button(action: {
-                        gl.view = "PlannerView"
+                        gl.view = "Planner"
                     }) {
                         Image(systemName: "grid")
                             .resizable()
@@ -52,7 +52,7 @@ struct NavBarPV: View {
                     }
                     Spacer()
                     Button(action: {
-                        gl.view = "TasksAndNotifsView"
+                        gl.view = "TasksAndNotifs"
                     }) {
                         Image(systemName: "checkmark.circle")
                             .resizable()
@@ -82,7 +82,7 @@ struct NavBarPlanV: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        gl.view = "PlantsView"
+                        gl.view = "Plants"
                     }) {
                         Image(systemName: "leaf")
                             .resizable()
@@ -112,7 +112,7 @@ struct NavBarPlanV: View {
                     }
                     Spacer()
                     Button(action: {
-                        gl.view = "TasksAndNotifsView"
+                        gl.view = "TasksAndNotifs"
                     }) {
                         Image(systemName: "checkmark.circle")
                             .resizable()
@@ -141,7 +141,7 @@ struct NavBarTN: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        gl.view = "PlantsView"
+                        gl.view = "Plants"
                     }) {
                         Image(systemName: "leaf")
                             .resizable()
@@ -151,7 +151,7 @@ struct NavBarTN: View {
                     }
                     Spacer()
                     Button(action: {
-                        gl.view = "PlannerView"
+                        gl.view = "Planner"
                     }) {
                         Image(systemName: "grid")
                             .resizable()

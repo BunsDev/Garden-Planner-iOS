@@ -9,17 +9,17 @@ import SwiftUI
 
 struct FolderDetail_Preview: PreviewProvider {
     static var previews: some View {
-        FolderDetailView()
+        FolderDetail()
             .environmentObject(Global())
     }
 }
 
-struct FolderDetailView: View {
+struct FolderDetail: View {
     @EnvironmentObject var gl: Global
     var body: some View {
         VStack {
             Button(action: {
-                gl.view = "PlantsView"
+                gl.view = "Plants"
             }) {
                 HStack {
                     Image(systemName: "chevron.left")

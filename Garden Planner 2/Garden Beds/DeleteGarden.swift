@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct DeleteFolder_Preview: PreviewProvider {
+struct DeleteGarden_Preview: PreviewProvider {
     static var previews: some View {
-        DeleteFolderView()
+        DeleteGarden()
             .environmentObject(Global())
     }
 }
 
-struct DeleteFolderView: View {
+struct DeleteGarden: View {
     
     @EnvironmentObject var gl: Global
     
@@ -23,10 +23,10 @@ struct DeleteFolderView: View {
             
             //MARK: - Header
             VStack(alignment: .leading) {
-                Text("Delete a Folder")
+                Text("Delete a Garden")
                     .font(.custom("Inter-Bold", size: 40))
                     .padding(.bottom, -1)
-                Text("Select one of the folders from\nthe list below.")
+                Text("Select a garden from the list below.")
                     .font(.custom("Inter-SemiBold", size: 21))
             } .padding(.top, -5)
             
@@ -59,39 +59,39 @@ struct DeleteFolderView: View {
                             .cornerRadius(20)
                     }
                 }
-            }.padding(.top, 30)
+            }.padding(.top, 10)
                 .padding(.trailing, 6)
             
             
             //MARK: - Folders
             VStack(alignment: .leading) {
-                ForEach(gl.folders, id: \.self) { folder in
+                ForEach(gl.beds, id: \.self) { bed in
                     Button(action: {
-                        let i = gl.folders.firstIndex(where: {$0.name == folder.name})
-                        if !gl.folders[i!].selected {
-                            gl.folders[i!].selected = true
+                        let i = gl.beds.firstIndex(where: {$0.name == bed.name})
+                        if !gl.beds[i!].selected {
+                            gl.beds[i!].selected = true
                         } else {
-                            gl.folders[i!].selected = false
+                            gl.beds[i!].selected = false
                         }
                     }) {
                         HStack {
                             ZStack {
-                                Image(systemName: folder.selected ? "circle.fill" : "circle")
+                                Image(systemName: bed.selected ? "circle.fill" : "circle")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .foregroundColor(.lightGreen)
-                                Image(systemName: folder.selected ? "checkmark.circle" : "circle")
+                                Image(systemName: bed.selected ? "checkmark.circle" : "circle")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .foregroundColor(.darkGreen)
                             }.frame(height: 25)
                                 .padding(.trailing, 8)
-                            Text(folder.name)
+                            Text(bed.name)
                                 .font(.custom("Inter-Medium", size: 25))
                         }
                     }
                 }
-            }.padding(.top, 10)
+            }.padding(.top, 15)
                 .padding(.leading, 5)
             
             
@@ -102,7 +102,7 @@ struct DeleteFolderView: View {
                     Spacer()
                     Button(action: {
                         removeSelected()
-                        gl.view = "PlantsView"
+                        gl.view = "Planner"
                     }) {
                         RoundedRectangle(cornerRadius: 22)
                             .frame(width: 130, height: 50)
@@ -115,7 +115,7 @@ struct DeleteFolderView: View {
                     Spacer()
                 }.padding(.bottom, 20)
                 Button(action: {
-                    gl.view = "PlantsView"
+                    gl.view = "Planner"
                 }) {
                     Text("Cancel")
                         .font(.custom("Inter-SemiBold", size: 17))
@@ -129,31 +129,31 @@ struct DeleteFolderView: View {
     }
 }
 
-extension DeleteFolderView {
+extension DeleteGarden {
     func selectAll() {
-        for folder in gl.folders {
-            let i = gl.folders.firstIndex(where: {$0 == folder})
-            gl.folders[i!].selected = true
+        for bed in gl.beds {
+            let i = gl.beds.firstIndex(where: {$0 == bed})
+            gl.beds[i!].selected = true
         }
     }
     func allDeselected() -> Bool {
-        for folder in gl.folders {
-            if folder.selected{
+        for bed in gl.beds {
+            if bed.selected{
                 return false
             }
         }
         return true
     }
     func deselectAll() {
-        for folder in gl.folders {
-            let i = gl.folders.firstIndex(where: {$0 == folder})
-            gl.folders[i!].selected = false
+        for bed in gl.beds {
+            let i = gl.beds.firstIndex(where: {$0 == bed})
+            gl.beds[i!].selected = false
         }
     }
     func removeSelected() {
-        for folder in gl.folders {
-            if folder.selected {
-                gl.folders.removeAll(where: {$0 == folder})
+        for bed in gl.beds {
+            if bed.selected {
+                gl.beds.removeAll(where: {$0 == bed})
             }
         }
     }

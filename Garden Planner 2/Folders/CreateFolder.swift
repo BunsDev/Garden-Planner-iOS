@@ -10,12 +10,12 @@ import WrappingHStack
 
 struct CreateFolder_Preview: PreviewProvider {
     static var previews: some View {
-        CreateFolderView()
+        CreateFolder()
             .environmentObject(Global())
     }
 }
 
-struct CreateFolderView: View {
+struct CreateFolder: View {
     
     @EnvironmentObject var gl: Global
     @ObservedObject var vm = CreateFolderVM()
@@ -58,46 +58,46 @@ struct CreateFolderView: View {
             }
             
             
-            //MARK: - Tags
-            Group{
-                Text("OPTIONAL TAGS")
-                .font(.custom("Inter-SemiBold", size: 16))
-                .foregroundColor(.accentColor)
-                .padding(.top, 20)
-            
-                WrappingHStack(FolderTags().tags, id: \.self) { tag in
-                    if notInTags(item: tag) {
-                        Button(action: {
-                            vm.selectedTags.append(tag)
-                        }) {
-                            Group {
-                                Text(tag)
-                                    .font(.custom("Inter-Medium", size: 16))
-                                    .padding([.leading, .trailing], 15)
-                                    .padding([.top, .bottom], 7)
-                                    .background(Color.lightestGreen)
-                                    .foregroundColor(.darkGreen)
-                                    .cornerRadius(20)
-                            }.padding(.bottom, 12)
-                        }
-                    } else {
-                        Button(action: {
-                            vm.selectedTags.removeAll(where: {$0 == tag})
-                        }) {
-                            Group {
-                                Text(tag)
-                                    .font(.custom("Inter-Medium", size: 16))
-                                    .padding([.leading, .trailing], 15)
-                                    .padding([.top, .bottom], 7)
-                                    .background(Color.darkGreen)
-                                    .foregroundColor(.lightestGreen)
-                                    .cornerRadius(20)
-                            }.padding(.bottom, 12)
-                        }
-                    }
-                }
-                    .frame(width: 300)
-            }
+//            //MARK: - Tags
+//            Group{
+//                Text("OPTIONAL TAGS")
+//                .font(.custom("Inter-SemiBold", size: 16))
+//                .foregroundColor(.accentColor)
+//                .padding(.top, 20)
+//
+//                WrappingHStack(FolderTags().tags, id: \.self) { tag in
+//                    if notInTags(item: tag) {
+//                        Button(action: {
+//                            vm.selectedTags.append(tag)
+//                        }) {
+//                            Group {
+//                                Text(tag)
+//                                    .font(.custom("Inter-Medium", size: 16))
+//                                    .padding([.leading, .trailing], 15)
+//                                    .padding([.top, .bottom], 7)
+//                                    .background(Color.lightestGreen)
+//                                    .foregroundColor(.darkGreen)
+//                                    .cornerRadius(20)
+//                            }.padding(.bottom, 12)
+//                        }
+//                    } else {
+//                        Button(action: {
+//                            vm.selectedTags.removeAll(where: {$0 == tag})
+//                        }) {
+//                            Group {
+//                                Text(tag)
+//                                    .font(.custom("Inter-Medium", size: 16))
+//                                    .padding([.leading, .trailing], 15)
+//                                    .padding([.top, .bottom], 7)
+//                                    .background(Color.darkGreen)
+//                                    .foregroundColor(.lightestGreen)
+//                                    .cornerRadius(20)
+//                            }.padding(.bottom, 12)
+//                        }
+//                    }
+//                }
+//                    .frame(width: 300)
+//            }
             Spacer()
             
             
@@ -109,8 +109,8 @@ struct CreateFolderView: View {
                         if vm.name.isEmpty {
                             vm.noNameError = true
                         } else {
-                            gl.folders.append(folder(name: vm.name, contents: [], selected: false, tags: vm.selectedTags))
-                            gl.view = "PlantsView"
+                            gl.folders.append(folder(name: vm.name, contents: [], selected: false))
+                            gl.view = "Plants"
                         }
                     }) {
                         RoundedRectangle(cornerRadius: 22)
@@ -125,7 +125,7 @@ struct CreateFolderView: View {
                     Spacer()
                 }.padding(.bottom, 20)
                 Button(action: {
-                    gl.view = "PlantsView"
+                    gl.view = "Plants"
                 }) {
                     Text("Cancel")
                         .font(.custom("Inter-SemiBold", size: 17))
@@ -139,7 +139,7 @@ struct CreateFolderView: View {
     }
 }
 
-extension CreateFolderView {
+extension CreateFolder {
     @MainActor class CreateFolderVM: ObservableObject {
         @Published var name = ""
         @Published var noNameError = false

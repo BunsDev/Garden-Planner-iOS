@@ -13,16 +13,15 @@ class FolderTags: ObservableObject {
 }
 
 
-
 struct folder: Hashable {
     var name: String
     var contents: [crop]
     var selected: Bool
-    var tags: [String]
+//    var tags: [String]
 }
 extension folder {
     public static func ==(lhs: folder, rhs: folder) -> Bool {
-        return lhs.name == rhs.name && lhs.contents == rhs.contents && lhs.selected == rhs.selected && lhs.tags == rhs.tags
+        return lhs.name == rhs.name && lhs.contents == rhs.contents && lhs.selected == rhs.selected
     }
 }
 

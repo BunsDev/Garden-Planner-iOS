@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CropDetail_Preview: PreviewProvider {
     static var previews: some View {
-        CropDetailView()
+        CropDetail()
             .environmentObject(Global())
     }
 }
 
-struct CropDetailView: View {
+struct CropDetail: View {
     
     @EnvironmentObject var gl: Global
     @ObservedObject var vm = CropDetailVM()
@@ -29,7 +29,7 @@ struct CropDetailView: View {
                         } else if !vm.hearted && inFavs() {
                             gl.folders[0].contents.removeAll(where: {$0 == gl.passCrop})
                         }
-                        gl.view = "PlantsView"
+                        gl.view = "Plants"
                     }) {
                         HStack {
                             Image(systemName: "chevron.left")
@@ -79,7 +79,7 @@ struct CropDetailView: View {
     }
 }
 
-extension CropDetailView {
+extension CropDetail {
     @MainActor class CropDetailVM: ObservableObject {
         @Published var hearted = false
     }
